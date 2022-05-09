@@ -1,5 +1,7 @@
 # LIST YOUR APT PACKAGES HERE
 
+git
+nano
 python3-pip
 python3-catkin-*
 ros-noetic-tf-conversions
