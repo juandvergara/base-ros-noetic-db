@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# The inputs to this script are:
+#
+#   1.[REPO_NAME]
+#   2.[MAINTAINER]
+#
+
+# get arguments
+REPO_NAME=$1
+MAINTAINER=$2
+DESCRIPTION=$3
+
+# check REPO_NAME
+if [ "${REPO_NAME}" = "<REPO_NAME_HERE>" ]; then
+  >&2 echo "ERROR: You need to change the value of REPO_NAME inside Dockerfile.";
+  exit 1;
+fi
+
+# check MAINTAINER
+if [ "${MAINTAINER}" = "<YOUR_FULL_NAME> (<YOUR_EMAIL_ADDRESS>)" ]; then
+  >&2 echo "ERROR: You need to change the value of MAINTAINER inside Dockerfile.";
+  exit 2;
+fi
+
+# check DESCRIPTION
+if [ "${DESCRIPTION}" = "<DESCRIPTION_HERE>" ]; then
+  >&2 echo "ERROR: You need to change the value of DESCRIPTION inside Dockerfile.";
+  exit 3;
+fi
+
+# everything should be OK
+echo "PASSED: Your build environment looks fine!";

@@ -1,0 +1,6 @@
+# LIST YOUR APT PACKAGES HERE
+
+python3-pip
+python3-catkin-*
+ros-noetic-tf-conversions
+ros-noetic-cv-bridge
